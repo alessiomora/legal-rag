@@ -1,4 +1,4 @@
-# Legal RAG Evaluation
+# Legal RAG
 
 Minimal retrieval-augmented generation system for public legal text, built around the GDPR. The project demonstrates document ingestion, article-aware chunking, vector search, grounded answer generation with citations, and retrieval evaluation.
 
