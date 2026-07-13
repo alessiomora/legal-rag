@@ -4,6 +4,10 @@ Minimal retrieval-augmented generation system for public legal text, built aroun
 
 It is a prototype, not a legal assistant and not legal advice.
 
+## Demo
+
+![Legal RAG demo](docs/assets/demo.gif)
+
 ## What It Demonstrates
 
 - Ingestion of official GDPR text from EUR-Lex.
