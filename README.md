@@ -10,6 +10,8 @@ It is a prototype, not a legal assistant and not legal advice.
 
 ![Legal RAG demo](docs/assets/demo.gif)
 
+The UI exposes the two main API paths. `Retrieve` returns the most relevant GDPR chunks from Qdrant for a query, such as the data-breach notification example in the demo. `Ask` runs the same retrieval step, then sends the retrieved chunks to the LLM so it can produce a short grounded answer with citations.
+
 ## What It Demonstrates
 
 - Ingestion of official GDPR text from EUR-Lex.
