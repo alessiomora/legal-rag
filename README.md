@@ -32,6 +32,10 @@ EUR-Lex GDPR text
   -> OpenAI answer generation with citations
 ```
 
+## Chunking Strategy
+
+The ingestion pipeline parses the prepared GDPR Markdown and splits it first by article headings such as `Article 7 Conditions for consent`. Each article is then divided into overlapping word windows with a default chunk size of 220 words and 40 words of overlap. This keeps chunks small enough for retrieval and LLM context while preserving legal metadata (`document`, `article`, `section`, `source`, `chunk_id`) for citations and article-level evaluation. The overlap reduces boundary loss when relevant legal language spans two adjacent chunks.
+
 ## Services
 
 The Docker Compose setup runs three services:
