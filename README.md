@@ -1,6 +1,8 @@
 # Legal RAG Evaluation
 
-Minimal retrieval-augmented generation system for public legal text, built around the [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj). The project demonstrates document ingestion, article-aware chunking, vector search, grounded answer generation with citations, and retrieval evaluation.
+Minimal retrieval-augmented generation system for public legal text, built around the GDPR. The project demonstrates document ingestion, article-aware chunking, vector search, grounded answer generation with citations, and retrieval evaluation.
+
+The GDPR corpus is downloaded from the official EUR-Lex text of [Regulation (EU) 2016/679](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679). The downloader uses the official EUR-Lex ELI endpoint (`https://eur-lex.europa.eu/eli/reg/2016/679/oj`) and writes a normalized Markdown copy to `data/raw/gdpr.md`.
 
 It is a prototype, not a legal assistant and not legal advice.
 
