@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+data/processed/*.jsonl
+evaluation/results/*.csv
+!evaluation/results/embedding_comparison.csv
+PRIVATE_NOTES.md

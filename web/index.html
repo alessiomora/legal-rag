@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Legal RAG Evaluation</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="query-panel" aria-labelledby="page-title">
+        <div class="title-row">
+          <div>
+            <p class="eyebrow">Legal RAG Evaluation</p>
+            <h1 id="page-title">GDPR grounded search</h1>
+          </div>
+          <a class="docs-link" href="/docs">API docs</a>
+        </div>
+
+        <div class="mode-tabs" role="tablist" aria-label="Query mode">
+          <button class="tab active" type="button" data-mode="retrieve">Retrieve</button>
+          <button class="tab" type="button" data-mode="ask">Ask</button>
+        </div>
+
+        <form id="query-form" class="query-form">
+          <label for="query-input" id="query-label">Query</label>
+          <textarea
+            id="query-input"
+            name="query"
+            rows="5"
+            placeholder="What are the conditions for valid consent under GDPR?"
+            required
+          ></textarea>
+
+          <div class="controls">
+            <label for="top-k">Top K</label>
+            <input id="top-k" name="top-k" type="number" min="1" max="20" value="5" />
+            <button id="submit-button" type="submit">Retrieve evidence</button>
+          </div>
+        </form>
+
+        <div class="examples" aria-label="Example questions">
+          <button type="button" data-example="What are the conditions for valid consent under GDPR?">
+            Consent
+          </button>
+          <button type="button" data-example="When must a personal data breach be notified?">
+            Breach notice
+          </button>
+          <button type="button" data-example="What is the right to data portability?">
+            Portability
+          </button>
+        </div>
+      </section>
+
+      <section class="results-panel" aria-live="polite">
+        <div class="status-row">
+          <h2 id="results-title">Results</h2>
+          <span id="status-badge" class="status-badge">Ready</span>
+        </div>
+        <div id="answer-card" class="answer-card hidden"></div>
+        <div id="results-list" class="results-list"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
