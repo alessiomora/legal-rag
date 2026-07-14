@@ -59,6 +59,7 @@ def _window_words(words: list[str], chunk_size: int, overlap: int) -> list[str]:
     chunks: list[str] = []
     step = chunk_size - overlap
     for start in range(0, len(words), step):
+        # Overlap keeps cross-boundary legal clauses visible to nearby chunks.
         window = words[start : start + chunk_size]
         if not window:
             break
