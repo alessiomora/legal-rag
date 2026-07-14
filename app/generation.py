@@ -47,6 +47,7 @@ def answer_question(question: str, chunks: list[RetrievedChunk]) -> str:
         )
 
     client = OpenAI(api_key=settings.openai_api_key)
+    # /ask sends only retrieved chunks, so generation stays tied to visible evidence.
     user_prompt = (
         f"Question: {question}\n\n"
         f"Retrieved context:\n{build_context(chunks)}\n\n"
